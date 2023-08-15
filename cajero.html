@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,9 @@
 
 <body>
 
-
+  <select name="" id="" ng-model="lista.productoSeleccionado">
+    <option ng-repeat="producto in lista.productos" value="{{producto.id}}">{{producto.nombre}}</option>
+  </select>
 
   <input type="text" ng-model="lista.cantidad">
 
@@ -30,15 +32,15 @@
       <td>{{producto.cantidad}}</td>
       <td>${{producto.total}}</td>
     </tr>
-    <tr class="total">
+    <!-- <tr class="total">
       <td></td>
       <td></td>
       <td></td>
       <td>${{lista.getTotalCarrito()}}}</td>
-    </tr>
+    </tr> -->
   </table>
 
 
 </body>
 
-</html> -->
+</html>

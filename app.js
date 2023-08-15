@@ -8,7 +8,7 @@ app.config(function ($routeProvider) {
     })
     .when("/productos", {
       templateUrl: "productos.html",
-      controller: " controlador"
+      controller: "controlador"
     });
 });
 
@@ -16,6 +16,7 @@ app.controller("controlador", function ($scope) {
   var lista = this;
   var n = 2;
   var nCarrito = 1;
+
   lista.productos = [
     { id: 1, nombre: "Azucar", precio: 650 },
     { id: 2, nombre: "Cafe", precio: 1250 }
@@ -55,7 +56,6 @@ app.controller("controlador", function ($scope) {
 
   }
 
-  //revisar
   lista.getTotalCarrito = function () {
     var total = 0;
     lista.carrito.forEach(x => {
@@ -63,11 +63,8 @@ app.controller("controlador", function ($scope) {
       total += x.total;
 
     });
-    // return total,
-  };
-
-
-
+    return total;
+  }
 
 
 });
